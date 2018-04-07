@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+	<ul class="nav navbar-nav mr-auto">
+			<div class="navbar-brand">TICS</div>
+  </ul>
+  <ul class="nav navbar-nav">
+		<div align="center" class="col-md-12" style="cursor: default; color:white;">Time Remaining
+			<div id="timer" style="cursor: default; color:white;"></div>
+		</div>		
+	</ul>
+</nav>
+	  
+<div class="container" style="margin-top:5em">
+		<div class="row">
+			<div class="col-md-12 bread-div">
+				<h3>Good Luck {{candidName}}!</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table">
+					<thead>
+						  <tr>
+							<th>No.</th>
+							<th>Question Name</th>
+						  </tr>
+					</thead>
+					<tbody>
+						  <tr *ngFor="let question of all_ques; let i = index ;">
+							<td><p>{{i+1}}</p></td>
+							<td>
+								<p>{{question.question_name}}<p>
+								<!-- Options are as follows	 -->
+									<label class="radio-inline" *ngFor="let answer of question.answers" style="margin-right: 30px;">
+										<input type="radio" name="myanswer{{i}}" [checked]="idx === 0" [value]="answer" (change)="$event.target.checked? onSelectionChange(answer, question._id, question.correct_answer) : false" />
+							{{answer}}
+									</label>
+							</td>
+						  </tr>
+					</tbody>
+				  </table>
+			</div>
+		</div>
+	
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-md-12">
+				<button class="btn btn-primary" (click)="sendAnswers()"  style="display: block; margin: 0 auto;">Submit Test</button>
+			</div>
+		</div>
+	</div>

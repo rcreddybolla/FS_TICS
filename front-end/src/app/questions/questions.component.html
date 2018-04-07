@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container" style="padding-left: 6%; padding-right: 6%; margin-top: 7%;">
+	<div class="row">
+		<div class="col-md-12">
+			<h4>
+				Questions
+			</h4>
+			<p style="color: #b5b5b5; font-style: italic; font-size: 13px;">View or remove questions here..</p>	
+		</div>
+		
+	</div>
+		
+	<div class="row" style="margin-top: 3%;">
+		
+		<!-- View questions -->
+		<div class="col-md-12">
+			<table class="table">
+    			<thead>
+      				<tr>
+        				<th>Question Name</th>
+        				<th>Type</th>
+        				<th>Answers</th>
+        				<th>Correct Answer</th>
+        				<th>Category</th>
+        				<th>Action</th>
+      				</tr>
+    			</thead>
+    			<tbody>
+      				<tr *ngFor="let question of all_ques">
+        				<td>{{question.question_name}}</td>
+        				<td>{{question.question_type}}</td>
+        				<td>{{question.answers}}</td>
+        				<td>{{question.correct_answer}}</td>
+        				<td>{{question.question_category}}</td>
+        				<td><button class="btn btn-danger" (click)="deleteQuestion(question)">Delete</button></td>
+      				</tr>
+    			</tbody>
+  			</table>
+		</div>
+	</div>
+</div>

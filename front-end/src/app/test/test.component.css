@@ -1,0 +1,35 @@
+.my-breadcrumbs {
+	color: grey;
+	margin: 0px 5px;
+}
+
+.my-breadcrumbs-active {
+	color: #333;
+	margin: 0px 5px;
+}
+
+.bread-div {
+	background-color: #dcdcdc; 
+	padding-top: 15px;
+}
+
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+.new-ques-fields{
+	margin-bottom: 10px;
+}
+
+.create-test-btn {
+	display: block; 
+	width: 30%; 
+	margin: 0 auto;
+}
+
+.addLabel {
+	margin-left: 1%;
+	font-size: 16px;
+	color: #ababab;
+	cursor: pointer;
+}

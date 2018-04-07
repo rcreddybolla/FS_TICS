@@ -1,0 +1,18 @@
+.answer-options {
+	margin-bottom: 10px;
+}
+
+.my-breadcrumbs {
+	color: grey;
+	margin: 0px 5px;
+}
+
+.my-breadcrumbs-active {
+	color: #333;
+	margin: 0px 5px;
+}
+
+.bread-div {
+	background-color: #dcdcdc; 
+	padding-top: 15px;
+}

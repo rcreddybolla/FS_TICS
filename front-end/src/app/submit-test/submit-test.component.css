@@ -1,0 +1,27 @@
+.my-breadcrumbs {
+	color: grey;
+	margin: 0px 5px;
+}
+
+.my-breadcrumbs-active {
+	color: #333;
+	margin: 0px 5px;
+}
+
+.bread-div {
+	background-color: #dcdcdc; 
+	padding-top: 15px;
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+#timer {
+	font-size: 20px;
+	color: white;
+}

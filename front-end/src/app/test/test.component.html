@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container-fluid" style="padding-left: 6%; padding-right: 6%; padding-top: 7%;">    		
+    <div class="row">
+    	<div class="col-md-12">
+    		<h4>
+    			Current Test 
+    			<small class="addLabel" [routerLink]="['/createTest']">
+    				<i class="fas fa-plus-circle" style="margin-right: 6px;"></i>Add a new test
+    			</small>
+    		</h4>
+    		<table class="table" style="margin-top: 2%;">
+    			<thead>
+      				<tr>
+        				<th>Index</th>
+        				<th>Designation</th>
+        				<th>Skills</th>
+						<th colspan="2">Actions</th>
+      				</tr>
+    			</thead>
+    			<tbody>
+      				<tr *ngFor="let test of allTests; let i = index">
+        				<td>{{i+1}}</td>
+        				<td>{{test.designation}}</td>
+        				<td>{{test.skills}}</td>
+						<td><button class="btn btn-danger" (click)="deleteTest(test)">Delete</button></td>
+						<td><a class="btn btn-warning" (click)="shareTest(test, i)" id = "link,i">Share</a></td>
+      				</tr>
+      			</tbody>
+      		</table>		
+    	</div>
+    </div>
+</div>

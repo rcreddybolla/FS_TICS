@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10" style="margin-top: 10%; margin-left: 7%; margin-right: 7%;">
+            <div class="row">
+                <div class="col-sm-4" style="background-color: grey;">
+                    <h3 class="welcome-heading">Welcome!</h3>
+                    <p class="sub-heading">TEK Intelligent Candidate Screening </p>
+                </div>
+                <div class="col-sm-8" style="background-color: #eaeaea;">
+                <p style="font-style: italic; margin-top: 6%; color: grey; font-size: 11px; margin-bottom: 6%">Please fill in your details to get started.</p>
+                
+            <form #welcomeForm="ngForm">     <!--(ngSubmit)="submitForm(welcomeForm.value)"-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="usr" class="input-labels">Full Name</label>
+                            <input type="text" pattern="[a-zA-Z\s]+" [(ngModel)]="newCandidate.candid_name" class="form-control" id="usr" name="usr" #usr="ngModel" required>
+                            <div *ngIf="usr.errors && usr.touched" class="alert alert-danger">
+                                <div [hidden]="!usr.errors.required">Please enter your name.</div>
+                                <div [hidden]="!usr.errors.pattern">Please enter a valid name.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact" class="input-labels">Contact No</label>
+                            <input type="text" pattern="(7|8|9)[0-9]{9}" minlength = "10" maxlength="10" [(ngModel)]="newCandidate.candid_phone" class="form-control" id="contact" name="contact" #contact="ngModel" required>
+                            <div *ngIf="contact.errors && contact.touched" class="alert alert-danger">
+                                <div [hidden]="!contact.errors.required">Please enter your contact number.</div>
+                                <div [hidden]="!(contact.errors.pattern || contact.errors.minlength)">Please enter 10 valid digits.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exp" class="input-labels">No. of Experience</label>
+                            <input type="number" min="0" [(ngModel)]="newCandidate.no_of_exp" class="form-control" id="exp" placeholder="In years" name="exp" #exp="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectGender" class="input-labels">Gender</label>
+                            <select class="form-control" name="selectGender" id="selectedGender" 
+                            [(ngModel)]="selectedGender" #selectGender="ngModel" required>
+                                <option value="" selected="selected" style="display:none"></option>
+                                <option *ngFor="let gender of genders" [value]="gender">
+                                    {{gender}}
+                                </option>
+							</select>
+							<div *ngIf="selectGender.errors && selectGender.touched" class="alert alert-danger">
+                                Please select your gender.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email" class="input-labels">Email</label>
+							<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" [(ngModel)]="newCandidate.candid_email" class="form-control" id="email" name="email" #email="ngModel" required>
+							<div *ngIf="!email.valid && email.touched" class="alert alert-danger">
+								<div [hidden]="!email.errors.required">Please enter your mail id.</div>
+								<div [hidden]="!email.errors.pattern">Please enter a valid mail id.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="alt" class="input-labels">Alternate No</label>
+                            <input type="text" pattern="(7|8|9)[0-9]{9}" minlength = "10" maxlength="10" [(ngModel)]="newCandidate.candid_phone2" class="form-control" id="alt"
+							name="alt" #alt="ngModel" required>
+							<div *ngIf="alt.errors && alt.touched" class="alert alert-danger">
+                                <div [hidden]="!alt.errors.required">Please enter an alternative number.</div>
+                                <div [hidden]="!(alt.errors.pattern || alt.errors.minlength)">Please enter 10 valid digits.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob" class="input-labels">Date of Birth</label>
+                            <input type="date" pattern="{{reg}}" [(ngModel)]="newCandidate.dob" class="form-control" id="dob" name="dob" #dob="ngModel" required>
+                            <div *ngIf="dob.errors && dob.touched" class="alert alert-danger">
+                                <div [hidden]="!dob.errors.required">Please select your date of birth.</div>
+                                <div [hidden]="!dob.errors.pattern">You must be atleast 18 years old.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loc" class="input-labels">Preferred Location</label>
+                            <select class="form-control" name="selectLocation" id="selectLocation" 
+                            [(ngModel)]="selectedLocation" #selectLocation="ngModel" required>
+                                <option *ngFor="let location of locations">
+                                    {{location}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary proceed" (click)="insertCandidate(welcomeForm)">
+                Proceed</button>
+            </form> 
+            
+            </div>
+        </div>
+    </div>
+</div>

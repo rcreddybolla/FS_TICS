@@ -1,0 +1,46 @@
+.input-labels {
+	font-size: 12px;
+	color: #828282;
+}
+
+.login, 
+.login:active,
+.login:focus {
+	display: block; 
+	margin: 6% auto;
+	font-weight: 400;
+	background-color: grey;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	text-transform: uppercase;
+}
+
+.login:hover {
+	background-color: #5f5f5f;
+
+}
+
+.sub-heading {
+	font-size: 13px; 
+	color: #d6d6d6; 
+	position: absolute; 
+	bottom: 0;
+}
+
+.welcome-heading {
+	display: block; 
+	margin: 0 auto; 
+	color: white; 
+	margin-top: 60%; 
+	margin-bottom: 40%;
+}
+
+.center{
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+	margin-top:20%;
+	width:80em;
+}

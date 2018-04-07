@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+  <ul class="nav navbar-nav mr-auto">
+    <a class="navbar-brand" [routerLink]="['/dashboard']">TICS</a>
+  </ul>
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/dashboard']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/tests']">Tests</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/questions']">Questions</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/review']">Review</a>
+    </li>
+    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link cursorp" data-toggle="dropdown"> 
+      {{recruiterName}}<span class="caret"></span></a>
+      <ul class="bg-dark dropdown-menu lg">
+        <li class="nav-item cursorp" (click) = 'logOut()'><span class="nav-link">Logout</span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

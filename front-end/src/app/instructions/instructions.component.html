@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+  <ol class="nav navbar-nav mr-auto">
+    <span class="navbar-brand">TICS</span>
+  </ol>
+  <ol class="nav navbar-nav">
+    <a class="nav-link" style="cursor: default; color:white;"> 
+      Welcome {{candid_Name}}
+    </a>
+  </ol>
+</nav>
+
+<div style="margin: 5em">
+  <span style="font-size:25px; font-weight:550">INSTRUCTIONS</span><br/><br/>
+  <ol>
+    <li>
+      This test consists of multiple choice questions only.
+    </li>
+    <li>
+      Each question is a multiple choice question with four answer choices.
+    </li>
+    <li>
+      Answer each question carefully after reading it twice and then choose the ONE best answer.
+    </li>
+    <li>
+      Try to answer all questions.
+    </li>
+    <li>
+      If you have some knowledge about a question, it is better to answer it.
+    </li>
+    <li>
+      You will not be penalized for guessing as there are NO negative marks.
+    </li>
+    <li>
+      Be sure to allocate your time carefully so that you are able to complete the entire test within the stipulated time.
+    </li>
+    <li>
+      You may review your answers once in the end before submitting the test.
+    </li>
+    <li>
+      You are NOT permitted use a calculator or any reference material during the testing session.
+    </li>
+  </ol>
+  <div><br><br>    
+      <div>
+        <label style="font-weight: 550; font-size:20px;margin-left:22px">
+          <input id="agreeCheckbox" type="checkbox" [(ngModel)]="checked" name="checked"> I've read all the instructions and agree to the rules and regulations defined above.</label>
+      </div><br><br>
+      <div align="center" class="col-md-12">
+        <button name="back" [routerLink]="['/welcome-candid', candid_Id]" type="button" class="col-md-2 btn btn-primary">Back</button>
+        <button id="startButton" name="start" (click)="startTest()" type="button" class="col-md-2 btn btn-primary" [disabled]="!checked">Start</button>
+      </div>
+  </div>
+</div>
+  
