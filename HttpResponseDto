@@ -1,0 +1,36 @@
+
+
+public class HttpResponseDto extends BaseDto{
+	private int statusCode;
+	private String responseStr;
+
+	public HttpResponseDto(int statusCode, String responseStr) {
+		super();
+		this.statusCode = statusCode;
+		this.responseStr = responseStr;
+	}
+
+	public int getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public String getResponseStr() {
+		return responseStr;
+	}
+
+	public void setResponseStr(String responseStr) {
+		this.responseStr = responseStr;
+	}
+
+	@Override
+	public String toString() {
+		return "HttpResponceDto [statusCode=" + statusCode + ", responseStr="
+				+ responseStr + "]";
+	}
+
+	
+}
