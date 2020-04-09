@@ -34,3 +34,17 @@ public class HttpResponseDto extends BaseDto{
 
 	
 }
+	/**
+	 * Encodes the given string.
+	 * 
+	 * @param stringToEncode
+	 * @return String
+	 * 
+	 */
+	public static String encodeString(String stringToEncode) throws UnsupportedEncodingException {
+		logger.info("Entered the encodeString method");
+		//encode the given string
+		String encodedToken = URLEncoder.encode(stringToEncode, "UTF-8");
+		logger.info("Exiting encodeString method");
+		return encodedToken;
+	}
