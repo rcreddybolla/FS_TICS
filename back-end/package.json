@@ -23,7 +23,7 @@
     "express-session": "^1.15.6",
     "ldapjs": "^1.0.2",
     "method-override": "^2.3.10",
-    "mongoose": "^5.0.3",
+    "mongoose": "^5.7.5",
     "mongoose-unique-validator": "^2.0.0",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.2",
