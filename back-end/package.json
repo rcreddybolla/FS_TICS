@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "assert-plus": "^1.0.0",
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.20.1",
     "bunyan": "^1.8.12",
     "concurrently": "^3.5.1",
     "connect": "^3.6.6",
@@ -19,7 +19,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "ejs-locals": "^1.0.2",
-    "express": "~4.15.5",
+    "express": "~4.18.2",
     "express-session": "^1.15.6",
     "ldapjs": "^1.0.2",
     "method-override": "^2.3.10",
